@@ -1,5 +1,5 @@
 class Api::DepartmentsController < ApplicationController
-  before_action :set_department, :only [:show, :update, :destroy]
+  before_action :set_department, only: [:show, :update, :destroy]
 
 
   def index
@@ -15,7 +15,7 @@ class Api::DepartmentsController < ApplicationController
     if department.save
       render json: department
     else
-      render json: department.errors, status: 422
+      render json: @department.errors, status: 422
     end
   end
 
