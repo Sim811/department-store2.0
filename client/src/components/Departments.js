@@ -26,8 +26,22 @@ class Departments extends React.Component {
     return departments.map( department => (
       <Card key={department.id}>
         <Card.Content>
-          <Card.Header>{department.name}</Card.Header>
+          <Card.Header textAlign="center" href='/departments/'>{department.name}</Card.Header>
         </Card.Content>
+        <Button.Group>
+
+          <Button
+           icon="trash"
+           
+           size="small"
+           />
+          <Button
+           icon="pencil alternate"
+           
+           size="small"
+           />
+           
+           </Button.Group>
       </Card>
     ))
   }
